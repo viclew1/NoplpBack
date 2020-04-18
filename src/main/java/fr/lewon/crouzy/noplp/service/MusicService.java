@@ -10,5 +10,7 @@ public interface MusicService {
 
     Song createNewSong(String songName) throws Exception;
 
+    Song deleteSong(String songID) throws Exception;
+
     List<Song> getAllSongs();
 }

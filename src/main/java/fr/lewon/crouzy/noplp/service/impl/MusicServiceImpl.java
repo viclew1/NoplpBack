@@ -42,6 +42,17 @@ public class MusicServiceImpl implements MusicService {
         return this.songRepository.save(toSave);
     }
 
+    // Test git
+    @Override
+    public Song deleteSong(String songID) throws Exception {
+        if (songID == null || songID.isEmpty()) {
+            throw new MissingParameterException("songID");
+        }
+
+        return null;
+        //return this.songRepository.delete(toDelete);
+    }
+
     @Override
     public List<Song> getAllSongs() {
         return this.songRepository.findAll();
